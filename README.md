@@ -4,7 +4,7 @@ Projet de CAD
 Pour compiler il faut:
 $ ant 
 
-Pour le netoyage:
+Pour le nettoyage:
 $ ant clean
 
 Pour lancer le jeu:
