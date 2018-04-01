@@ -23,8 +23,9 @@ public class Main extends JFrame {
 	private MenuController menuController;
 
 	public Main() {
+
 		/*
-		 * Set look and feel
+		 * Set look and feel -Theme-
 		 */
 		try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -74,7 +75,7 @@ public class Main extends JFrame {
 		game.addObserver(gridComputer);
 		
 		frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
@@ -83,7 +84,6 @@ public class Main extends JFrame {
 
 	}
 
-	
 	/*
 	 *  Fonction principale 
 	 */
