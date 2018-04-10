@@ -18,9 +18,10 @@ Projet de CAD
   -  [*]                 Gérer les attributs et la vies des bateaux
   -  [*]                 Gérer la destruction des bateaux
   -  [*]                 Gestion de l'affichage des vies des bateaux
+  -  [*]                 Implémenter plusieurs époques
   -  [*]                 Création d'un menu
-  -  []                 Implémentation des stratégies de l'IA
-  -  []                 Création de sauvegardes
+  -  [en cours]          Implémenter les stratégies de l'IA
+  -  []                 Implémenter la sauvgarde d’une partie
   -  []                 Implémenter la reprise d’une partie
-  -  []                 Implémenter plusieurs époques
   -  []                 Ajouter un écran de fin (Win - Game Over)
+  -  [en cours]          Tests Unitaires

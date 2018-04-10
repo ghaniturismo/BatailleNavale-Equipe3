@@ -29,10 +29,10 @@ public class Menu extends JMenuBar implements Observer{
 	private Game game;
 	
 	private JMenu menu1;
-	private JMenu menu2;
 	private JMenuItem load;
 	private JMenuItem save;
 	private JMenuItem quit;
+	private JMenu menu2;
 	private JMenuItem customizeGame;
 	private JMenuItem fastGame;
 
@@ -93,7 +93,7 @@ public class Menu extends JMenuBar implements Observer{
 	
 	
 	public class MenuListener implements ActionListener {
-		int i;
+		private int i;
 
 		public MenuListener(int i) {
 			this.i = i;

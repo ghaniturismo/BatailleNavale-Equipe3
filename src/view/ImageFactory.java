@@ -189,6 +189,7 @@ public class ImageFactory {
 			new ImageIcon(getClass().getResource("/source/img/Boat4-4V.png"))
 	};
 	
+	///////////////////////////// CONSTRUCTEUR ////////////////////////////////
 	
 	private ImageFactory() {
 		
@@ -199,14 +200,6 @@ public class ImageFactory {
 			instance = new ImageFactory();
 		}
 		return instance;
-	}
-
-	public ImageIcon getNone() {
-		return none;
-	}
-	
-	public ImageIcon getShip() {
-		return ship;
 	}
 	
 	public ImageIcon getShoot() {
