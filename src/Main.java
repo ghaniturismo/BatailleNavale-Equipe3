@@ -81,7 +81,6 @@ public class Main extends JFrame {
 		frame.setVisible(true);
 			
 		SwingUtilities.updateComponentTreeUI(this);
-
 	}
 
 	/*

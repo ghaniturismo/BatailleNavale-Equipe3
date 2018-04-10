@@ -41,7 +41,9 @@ public class GridController {
 	
 	/*
 	 * Couleur lors du survole des placements des bateaux dans la grid
-	 * Vert : autorise, rouge : pas possible 
+	 * 
+	 * Vert : autorise, 
+	 * rouge : pas possible 
 	 */
 	public Color mouseOver(int ligne, int colonne) {
 		if(game.getEtat() == Etat.PLACINGBOATS)

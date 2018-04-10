@@ -30,17 +30,8 @@ public class MenuController {
 		game.newGame(epoque, ia_Strategy, aleatory);
 	}
 
-	/*
-	 * Getters and Setters
-	 */
-	
 	public Game getGame() {
 		return game;
 	}
-
-	public void setGame(Game game) {
-		this.game = game;
-	}
-
 	
 }

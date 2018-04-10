@@ -1,5 +1,6 @@
 package model;
 
+
 import javax.swing.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -436,15 +437,6 @@ public class Game extends Observable {
 		this.etat = etat;
 	}
 
-	
-	public String get_id() {
-		return _id;
-	}
-
-	public void set_id(String _id) {
-		this._id = _id;
-	}
-	
     public String getDate() {
         return _date;
     }
