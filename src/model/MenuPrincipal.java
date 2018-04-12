@@ -8,7 +8,7 @@ public class MenuPrincipal{
 //JPanel jp = new JPanel();
 
 public MenuPrincipal(){
-	TestM testm = new TestM(new BorderLayout());
+	BackImage backimage = new BackImage(new BorderLayout());
 	
 	JPanel panel = new JPanel();
 	panel.setOpaque(false);
@@ -18,15 +18,15 @@ public MenuPrincipal(){
 	//Création de bouton de jeu
 	JButton player = new JButton("Jouer");
 
-	testm.add(player,BorderLayout.NORTH);
+	backimage.add(player,BorderLayout.NORTH);
 	
-	//label.setFont(new Font("serif",Font.BOLD, 16));
+	
 	JLabel label = new JLabel("Bataille Navale");
 	panel.add(label);
 	
-	testm.add(panel);
+	backimage.add(panel);
 	JFrame f = new JFrame();
-	f.add(testm);
+	f.add(backimage);
 	
 	f.setSize(800,500);
 	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

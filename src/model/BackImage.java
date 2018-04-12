@@ -5,16 +5,16 @@ import javax.swing.*;
 
 
 
-public class TestM extends JPanel{
+public class BackImage extends JPanel{
 	
-public TestM(LayoutManager l){
+public BackImage(LayoutManager l){
 	super.setLayout(l);
 }
 
 protected void paintComponent(Graphics g){
 super.paintComponent(g);
 
-Image image = new ImageIcon(TestM.class.getResource("source/img/background1.jpg")).getImage();
+Image image = new ImageIcon(BackImage.class.getResource("source/img/background1.jpg")).getImage();
 
 int baslangicx = 0;
 int baslangicy = 0;
