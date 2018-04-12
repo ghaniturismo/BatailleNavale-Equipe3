@@ -15,7 +15,7 @@ public MenuPrincipal(){
 	
 	
 	
-	//Création de bouton de jeu
+	//Creation de bouton de jeu
 	JButton player = new JButton("Jouer");
 
 	backimage.add(player,BorderLayout.NORTH);
@@ -33,7 +33,7 @@ public MenuPrincipal(){
 	f.setVisible(true);
 	f.setResizable(false);
 	
-	//Centre le JFrame a l'écran
+	//Centre le JFrame a l'ecran
 	Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 	f.setLocation(dim.width/2 - f.getWidth()/2, dim.height/2 - f.getHeight()/2);
 	

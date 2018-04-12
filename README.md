@@ -19,7 +19,7 @@ Projet de CAD
   -  [*]                 Gérer la destruction des bateaux
   -  [*]                 Gestion de l'affichage des vies des bateaux
   -  [*]                 Implémenter plusieurs époques
-  -  [*]                 Création d'un menu
+  -  [*]                 Création d'un menu et Ajout écran d'acceuil
   -  [en cours]          Implémenter les stratégies de l'IA
   -  []                 Implémenter la sauvgarde d’une partie
   -  []                 Implémenter la reprise d’une partie
