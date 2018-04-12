@@ -214,6 +214,7 @@ public class ImageFactory {
 		return background;
 	}
 	
+	
 	public ImageIcon getShipXVI(int indice, String nom, boolean vertical) {
 		if(!vertical){
 			switch(nom) {
