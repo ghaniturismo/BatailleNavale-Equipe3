@@ -1,60 +1,76 @@
+package model;
+
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.*;
 
 
 public class MenuPrincipal{
 
-//JPanel jp = new JPanel();
-
-public MenuPrincipal(){
-	BackImage backimage = new BackImage(new BorderLayout());
+	public JFrame frame;
 	
-	JPanel panel = new JPanel();
-	panel.setOpaque(false);
+	ImageIcon icon = new ImageIcon(getClass().getResource("/source/img/background1.jpg"));
 	
-	
-	
-	//Creation de bouton de jeu
-	JButton player = new JButton("Jouer");
-
-	backimage.add(player,BorderLayout.NORTH);
-	
-	
-	JLabel label = new JLabel("Bataille Navale");
-	panel.add(label);
-	
-	backimage.add(panel);
-	JFrame f = new JFrame();
-	f.add(backimage);
-	
-	f.setSize(800,500);
-	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	f.setVisible(true);
-	f.setResizable(false);
-	
-	//Centre le JFrame a l'ecran
-	Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-	f.setLocation(dim.width/2 - f.getWidth()/2, dim.height/2 - f.getHeight()/2);
-	
-
-	ActionListener play =new ActionListener(){
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-           		f.dispose();
-				f.setVisible(false);
-                MenuF march =new MenuF();
-                march.setVisible(true);   
-            }
-      
-        };
+	public MenuPrincipal(){
 		
-		player.addActionListener(play);
+		frame = new JFrame();
+		
+		frame.setSize(900,500);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
+		
+		JPanel container = new JPanel(new BorderLayout());
+		
+		//On définit le layout à utiliser sur le content pane
+	    frame.setLayout(new BorderLayout());
+		
+		JPanel panel = new JPanel()
+		{	
+			private static final long serialVersionUID = 1L;
 
-	}
+			protected void paintComponent(Graphics g)
+			{
+				//  Dispaly image at full size
+				g.drawImage(icon.getImage(), 150, 40, null); 	
+				super.paintComponent(g);
+			}
+		};
+				
+		panel.setOpaque(false);
+		panel.setPreferredSize(new Dimension(100,600));
+		
+		frame.getContentPane().add(panel, BorderLayout.SOUTH);
+		
+		container.add(panel,BorderLayout.NORTH);
+ 		
+		JPanel southPanel = new JPanel();
+		//bouton jouer
+		JButton player = new JButton("Jouer");
+ 		southPanel.add(player);
+ 		
+ 		container.add(southPanel, BorderLayout.SOUTH);	
+ 		
+ 		
+ 		frame.setContentPane(container);
+ 		frame.setVisible(true);
+
+		
+		ActionListener play =new ActionListener(){
 	
+	            @Override
+	            public void actionPerformed(ActionEvent e) {
+	            	frame.dispose();
+	            	frame.setVisible(false);
+	                MenuPartie march =new MenuPartie();
+	                march.setVisible(true);   
+	            }
+	      
+	        };
+			
+		player.addActionListener(play);
 	
-	  
-        
+		}
+   
 }

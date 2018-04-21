@@ -1,10 +1,8 @@
 package model;
 
 
-
 import static org.junit.Assert.*;
 
-import model.Aleatoire;
 import model.World;
 
 import org.junit.Before;

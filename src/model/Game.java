@@ -14,9 +14,7 @@ public class Game extends Observable {
 	
 	private ArrayList<IA_Strategy> strats;
 	private ArrayList<Epoque> epoques;
-    private String _id;
-	
-	private Epoque epoque;
+    private Epoque epoque;
 	private IA_Strategy strategy;
 	private BateauFactory bf;
 	private Etat etat;

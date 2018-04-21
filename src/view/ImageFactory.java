@@ -14,6 +14,7 @@ public class ImageFactory {
 	private ImageIcon ship = new ImageIcon(getClass().getResource("/source/img/BoatDefault.png"));
 	private ImageIcon shoot = new ImageIcon(getClass().getResource("/source/img/Miss.png"));
 	private ImageIcon explosion = new ImageIcon(getClass().getResource("/source/img/Hit.png"));
+	//private ImageIcon fondEcran = new ImageIcon(getClass().getResource("/source/img/background1.jpg"));
 	
 	
 		//********************
@@ -191,7 +192,7 @@ public class ImageFactory {
 	
 	///////////////////////////// CONSTRUCTEUR ////////////////////////////////
 	
-	private ImageFactory() {
+	public ImageFactory() {
 		
 	}
 	

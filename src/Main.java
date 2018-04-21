@@ -1,11 +1,11 @@
+import model.MenuPrincipal;
 
 public class Main{
 	
-	private static final long serialVersionUID = 1L;
-		/*
+	/*
 	 *  Fonction principale 
 	 */
-	public static void main(String[] a) {
+	public static void main(String[] args) {
 		new MenuPrincipal();
 	}
 }

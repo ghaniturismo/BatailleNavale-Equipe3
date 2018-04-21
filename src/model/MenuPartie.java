@@ -1,3 +1,5 @@
+package model;
+
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
@@ -12,15 +14,19 @@ import view.InfoView;
 import view.Menu;
 import view.ShipSelectionView;
 
-public class MenuF extends JFrame {
+public class MenuPartie extends JFrame {
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Game game;
 	private Menu menu;
 	private GridController controller;
 	private MenuController menuController;
 
-	public MenuF() {
+	public MenuPartie() {
 
 		/*
 		 * Set look and feel -Theme-

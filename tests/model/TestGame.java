@@ -9,13 +9,10 @@ import model.Epoque;
 import org.junit.Before;
 import org.junit.Test;
 
-import model.*;
-
 
 public class TestGame {
 
 	private Game g;
-	private World wp;
 	private Epoque ep;
 	private IA_Strategy strat;
 	private BateauFactory bf;
