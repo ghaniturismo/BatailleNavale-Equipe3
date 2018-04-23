@@ -145,11 +145,11 @@ public class Menu extends JMenuBar implements Observer{
 				case QUICKGAME: controller.newFastGame();
 					break;
 					
-//				case SAVE:		controller.saveGame();
-//					break;
-//				
-//				case LOAD:		controller.loadGame();
-//					break;
+				case SAVE:		controller.saveGame();
+					break;
+				
+				case LOAD:		controller.loadGame();
+					break;
 					
 					
 				case EXIT:

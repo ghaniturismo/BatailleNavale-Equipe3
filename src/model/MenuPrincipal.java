@@ -1,7 +1,6 @@
 package model;
 
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.*;
 
@@ -63,8 +62,8 @@ public class MenuPrincipal{
 	            public void actionPerformed(ActionEvent e) {
 	            	frame.dispose();
 	            	frame.setVisible(false);
-	                MenuPartie march =new MenuPartie();
-	                march.setVisible(true);   
+	                MenuPartie menuPartie = new MenuPartie();
+	                menuPartie.setVisible(true);   
 	            }
 	      
 	        };

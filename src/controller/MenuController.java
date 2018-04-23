@@ -33,5 +33,18 @@ public class MenuController {
 	public Game getGame() {
 		return game;
 	}
+	/*
+	 * Pour la sauvegarde
+	 */
+	public void saveGame() {
+		sauvegarde.DAOFactory.getInstance().getDAO_Sauvegarde().saveGame(game);
+	}
+	
+	/*
+	 * Pour la restauration de jeu
+	 */
+	public void loadGame() {
+		sauvegarde.DAOFactory.getInstance().getDAO_Sauvegarde().loadGame(game.getProfil());
+	}
 	
 }

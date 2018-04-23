@@ -86,4 +86,4 @@ public class MenuPartie extends JFrame {
 			
 		SwingUtilities.updateComponentTreeUI(this);
 	}
-	}
+}
