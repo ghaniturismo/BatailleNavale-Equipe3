@@ -10,18 +10,18 @@ Projet de CAD
    
 # Backlog
   Ordre/priorité  Fonctionnalité
-  -  [*]                 Créer le monde
-  -  [*]                 Créer les bateaux
-  -  [*]                 Placer les bateaux
-  -  [*]                 Afficher le monde et les bateaux (graphique)
-  -  [*]                 Gérer les tirs
-  -  [*]                 Gérer les attributs et la vies des bateaux
-  -  [*]                 Gérer la destruction des bateaux
-  -  [*]                 Gestion de l'affichage des vies des bateaux
-  -  [*]                 Implémenter plusieurs époques
-  -  [*]                 Création d'un menu et Ajout écran d'acceuil
+  -  [OK]                 Créer le monde
+  -  [OK]                 Créer les bateaux
+  -  [OK]                 Placer les bateaux
+  -  [OK]                 Afficher le monde et les bateaux (graphique)
+  -  [OK]                 Gérer les tirs
+  -  [OK]                 Gérer les attributs et la vies des bateaux
+  -  [OK]                 Gérer la destruction des bateaux
+  -  [OK]                 Gestion de l'affichage des vies des bateaux
+  -  [OK]                 Implémenter plusieurs époques
+  -  [OK]                 Création d'un menu et Ajout de la fenetre d'acceuil
   -  [en cours]          Implémenter les stratégies de l'IA
-  -  []                 Implémenter la sauvgarde d’une partie
-  -  []                 Implémenter la reprise d’une partie
+  -  [OK]                 Implémenter la sauvgarde d’une partie [SAVE game]
+  -  []                 Implémenter la reprise d’une partie     [LOAD game]
   -  []                 Ajouter un écran de fin (Win - Game Over)
   -  [en cours]          Tests Unitaires
