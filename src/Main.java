@@ -1,4 +1,4 @@
-import model.MenuPrincipal;
+import view.MenuPrincipal;
 
 public class Main{
 	
