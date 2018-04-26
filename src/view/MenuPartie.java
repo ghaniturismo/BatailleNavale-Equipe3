@@ -12,7 +12,6 @@ import model.Game;
 
 public class MenuPartie extends JFrame {
 	
-	
 	/**
 	 * 
 	 */
@@ -75,7 +74,7 @@ public class MenuPartie extends JFrame {
 		game.addObserver(gridComputer);
 		
 		frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);

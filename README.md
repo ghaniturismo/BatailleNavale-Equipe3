@@ -1,11 +1,16 @@
 # BatailleNavale-Equipe3
-Projet de CAD
-
+Projet du module Conception d’architectures distribuées
+Master 1 Informatique - Universite de Lorraine
+# Equipe 3 
+    -- MAZROU Abdelghani
+    -- BEN TOUNES Samy
+    -- Ouefio Innocent Dieu Bénit
+    
 # Compilation et éxecution
    - Terminal :
-        * **ant compile** --> pour la compilation.
-        * **ant run** --> genere et lance l'éxecution .
-        * **ant clean** --> pour supprimer les fichiers bin et le jar.
+        * **ant** --> Pour la compilation.
+        * **ant run** --> Generer et lancer l'éxecution.
+        * **ant clean** --> Supprimer les fichiers bin ...
 
    
 # Backlog
@@ -19,9 +24,11 @@ Projet de CAD
   -  [OK]                 Gérer la destruction des bateaux
   -  [OK]                 Gestion de l'affichage des vies des bateaux
   -  [OK]                 Implémenter plusieurs époques
-  -  [OK]                 Création d'un menu et Ajout de la fenetre d'acceuil
-  -  [en cours]          Implémenter les stratégies de l'IA
+  -  [OK]                 Création d'un menu et Ajout de la fenetre d'accueil
+  -  [OK pour deux strat] Implémenter les stratégies de l'IA
+  -  [OK]			      Compteur de tirs -SCORE-
+  -  [OK]			      Fin d'une partie
   -  [OK]                 Implémenter la sauvgarde d’une partie [SAVE game]
   -  []                 Implémenter la reprise d’une partie     [LOAD game]
-  -  []                 Ajouter un écran de fin (Win - Game Over)
+  -  [OK]                 FIX build.xml
   -  [en cours]          Tests Unitaires

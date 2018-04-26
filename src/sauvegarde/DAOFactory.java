@@ -7,12 +7,11 @@ package sauvegarde;
 public class DAOFactory {
     
     private static final DAOFactory INSTANCE = new DAOFactory();
-    
+
     private DAOFactory() {
     
     }
-    
-    
+        
     /** Point d'accès pour l'instance unique du singleton
       * @return une instance du singleton 
       */
