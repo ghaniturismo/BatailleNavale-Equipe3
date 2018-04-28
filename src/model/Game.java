@@ -12,18 +12,19 @@ public class Game extends Observable {
 	
     ////////////////////////////// VARIABLES //////////////////////////////////
 	
-	private ArrayList<IA_Strategy> strats;
-	private ArrayList<Epoque> epoques;
-    private Epoque epoque;
+	private ArrayList<IA_Strategy> strats; //liste des strategies
+	private ArrayList<Epoque> epoques; //liste des epoques
+    private Epoque epoque; 
 	private IA_Strategy strategy;
-	private BateauFactory bf;
-	private Etat etat;
-	private boolean placeVertical = false;
+	private BateauFactory bf; //factory de bateau (pour recuperer les images des bateaux)
+	private Etat etat; //etat du jeu
+	private boolean placeVertical = false; 
 	private int currentSize = 0;
 	private Bateau currentShip;
 
-	private World worldPlayer;
-	private World worldComputer;
+	//Carte
+	private World worldPlayer; //carte du joueur
+	private World worldComputer; //carte de l IA
 
 	private Profil profil;
 	private String info;
@@ -34,6 +35,10 @@ public class Game extends Observable {
 	}
 	
 	///////////////////////////// CONSTRUCTEUR ////////////////////////////////
+	/**
+	 * Constructeur sans parametre
+	 * 
+	 */
 	public Game() {
 		strats = new ArrayList<IA_Strategy>();
 		epoques = new ArrayList<Epoque>();
@@ -45,11 +50,13 @@ public class Game extends Observable {
         this._date = dateFormat.format(cal.getTime());
 
 		
+        //recuperation des deux strategies dans strats
 		strats.add(new Intelligent());
 		strats.add(new Aleatoire());
 		
 		bf = new BateauFactory();
 		
+		//recuperation des images des bateaux du XXe siecle
 		Epoque siecle_20 = new Siecle_XX();
 		//Bateaux 20 eme siecle
 		siecle_20.addShip(bf.getBateau("ContreTorpilleur"));
@@ -58,6 +65,8 @@ public class Game extends Observable {
 		siecle_20.addShip(bf.getBateau("SousMarin"));
 		siecle_20.addShip(bf.getBateau("Torpieur"));
 		
+		
+		//recuperation des images des bateaux du XVIe siecle
 		Epoque siecle_16 = new Siecle_XVI();
 		//Bateaux 16 eme siecle
 		siecle_16.addShip(bf.getBateau("Brick"));
@@ -66,6 +75,7 @@ public class Game extends Observable {
 		siecle_16.addShip(bf.getBateau("Galion"));
 		siecle_16.addShip(bf.getBateau("NavireDeLigne"));
 		
+		//recuperation des deux epoques dans la liste epoques
 		epoques.add(siecle_16);
 		epoques.add(siecle_20);
 
@@ -79,8 +89,12 @@ public class Game extends Observable {
 		info = "Bienvenue";
 	}
 
-	/*
-	 * Lancement d'une nouvelle partie
+
+	/**
+	 * lancement d une nouvelle partie
+	 * @param a l epoque
+	 * @param m la strategie
+	 * @param al 1 si placement aleatoire, 0 sinon
 	 */
 	public void newGame(Epoque a, IA_Strategy m, int al) {
 		
@@ -100,11 +114,12 @@ public class Game extends Observable {
 		etat = Etat.PLACINGBOATS;
 		update();
 		
+		
 		if(al == 1)
 			placeAleatoryBoats();
 	}
 	
-	/*
+	/**
 	 * Choix de placement aleatoire des bateaux
 	 */
 	public void placeAleatoryBoats() {
@@ -118,15 +133,15 @@ public class Game extends Observable {
 		update();
 	}
 
-	/*
+	/**
 	 * Pour la partie rapide
-	 * Epoque 16 eme - strategie aleatoire - placement aleatoire
+	 * Par défaut : Epoque 16 eme - strategie aleatoire - placement aleatoire
 	 */
 	public void newFastGame() {
 		newGame(epoques.get(0), strats.get(1), 1);
 	}
 	
-	/*
+	/**
 	* Place aleatoirement un bateau dans un monde 'world'
 	*/
 	public void placeShipAleatory(World world, Bateau bateau, int size) {
@@ -182,7 +197,7 @@ public class Game extends Observable {
 		}
 	}
 	
-	/*
+	/**
 	* Place un bateau dans une case (x,y) dans le monde du joueur
 	*/
 	public void placeShip(int x, int y) {
@@ -233,7 +248,7 @@ public class Game extends Observable {
 			}
 		}
 	}
-	/*
+	/**
 	 *Mise a jour des affichage de la barre d'info 
 	 */
 	public void update() {
@@ -242,7 +257,7 @@ public class Game extends Observable {
 		notifyObservers();
 	}
 
-	/*
+	/**
 	 * Strategie de shoot aleatoire
 	 */
 	public void aleatoryShoot() {
@@ -251,7 +266,7 @@ public class Game extends Observable {
 		update();
 	}
 	
-	/*
+	/**
 	 * Pour clicker sur une case du jeux
 	 */
 	public void shoot(int x, int y) {
@@ -270,8 +285,8 @@ public class Game extends Observable {
 		}
 	}
 	
-	/*
-	 * Retourne le jeux s'il est fini.
+	/**
+	 * Retourne true si la partie est finie.
 	 */
 	public boolean gameFinished() {
 
@@ -318,6 +333,8 @@ public class Game extends Observable {
 		return false;
 	}
 	
+	
+	//GETTERS AND SETTERS
 	
 	public void setVertical() {
 		placeVertical = !placeVertical;

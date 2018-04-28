@@ -2,6 +2,10 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * Classe Intelligent 
+ * gere la strategie 'Intelligent'
+ */
 public class Intelligent implements IA_Strategy{
 	
     ////////////////////////////// VARIABLES //////////////////////////////////
@@ -9,11 +13,19 @@ public class Intelligent implements IA_Strategy{
 	private final String name = "Intelligent";
 	
     ///////////////////////////// CONSTRUCTEUR ////////////////////////////////
-
+	/**
+	 * Constructeur sans parametre
+	 */
 	public Intelligent(){
 		
 	}
-		
+	
+	/**
+	 * Methode shootCase
+	 * teste si le bateau est touche
+	 * @param shoot la case a tester
+	 * @param worldPlayer la carte du joueur
+	 */
 	public void shootCase(Case shoot, World worldPlayer){
 		if(worldPlayer.shipHit(shoot.getX(), shoot.getY(), true)) {
 			shoot.hit();
@@ -25,6 +37,11 @@ public class Intelligent implements IA_Strategy{
 	}
 	
 
+	/**
+	 * Methode shoot
+	 * effectue un tir
+	 * @param worldPlayer la carte du joueur
+	 */
 	public void shoot(World worldPlayer) {
 		
 		if(isHit(worldPlayer.getShoots())){
@@ -83,6 +100,13 @@ public class Intelligent implements IA_Strategy{
 		
 	}
 	
+	
+	/**
+	 * Methode getHits
+	 * liste les cases touchees
+	 * @param list la liste des cases du jeu
+	 * @return la liste des cases touchees 
+	 */
 	private ArrayList<Case> getHits(ArrayList<Case> list) {
 		ArrayList<Case> hits = new ArrayList<Case>();
 		for(int i = 0; i < list.size(); i++){
@@ -92,6 +116,12 @@ public class Intelligent implements IA_Strategy{
 		return hits;
 	}
 
+	/**
+	 * Methode isHit
+	 * @param list la liste (getShoots -> size=1) des cases
+	 * @return true si la case est touchee
+	 * 		   false sinon
+	 */
 	public boolean isHit(ArrayList<Case> list){
 		for(int i=0; i<list.size(); i++){
 			if(list.get(i).isHit())

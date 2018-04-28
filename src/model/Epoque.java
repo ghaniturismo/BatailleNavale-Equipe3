@@ -2,29 +2,43 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * Classe Epoque
+ * gere l epoque du jeu
+ */
 public class Epoque {
 	
 
 
 	////////////////////////////// VARIABLES //////////////////////////////////
 
-	private int nb_ship;
-	private String name;
-	private ArrayList<Bateau> ships;
+	private int nb_ship; //nombre de bateaux
+	private String name; //nom de l epoque
+	private ArrayList<Bateau> ships; //liste des bateau de l epoque
 	
 	
     ///////////////////////////// CONSTRUCTEUR ////////////////////////////////
-
-	public Epoque(){
-		//vide
+	public Epoque() {
+		
 	}
 	
+	
+	/**
+	 * Constructeur avec l epoque donnee
+	 * @param name le nom de l eqoque
+	 */
 	public Epoque (String name){
 		this.name = name;
 		nb_ship = 0;
 		ships = new ArrayList<Bateau>();
 	}
 	
+	
+	/**
+	 * Methode addShip
+	 * ajoute un bateau a une epoque
+	 * @param b le bateau a ajouter
+	 */
 	public void addShip(Bateau b){
 		if(!ships.contains(b)){
 			ships.add(b);
@@ -33,6 +47,8 @@ public class Epoque {
 		
 	}
 	
+	
+	///GETTERS AND SETTERS
 	public ArrayList<Bateau> getShips(){
 		return ships;
 	}
