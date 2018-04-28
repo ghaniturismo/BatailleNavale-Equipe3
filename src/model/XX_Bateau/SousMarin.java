@@ -20,7 +20,7 @@ public class SousMarin extends Bateau {
 	}
 
 	@Override
-	protected Bateau Copy() {
+	protected Bateau copy() {
 		
 		SousMarin clone = new SousMarin();
 		clone.setForce(this.getForce());

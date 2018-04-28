@@ -11,7 +11,7 @@ public class NavireDeLigne extends Bateau{
 	}
 	
 	@Override
-	protected Bateau Copy() {
+	protected Bateau copy() {
 		
 		NavireDeLigne clone = new NavireDeLigne();
 		clone.setForce(this.getForce());

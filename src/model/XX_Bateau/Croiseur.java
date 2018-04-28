@@ -21,7 +21,7 @@ public class Croiseur extends Bateau {
 	}
 
 	@Override
-	protected Bateau Copy() {
+	protected Bateau copy() {
 		
 		Croiseur clone = new Croiseur();
 		clone.setForce(this.getForce());

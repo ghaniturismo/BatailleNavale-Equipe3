@@ -19,7 +19,7 @@ public class Menu extends JMenuBar implements Observer{
 
 	private static final long serialVersionUID = 1L;
 	
-	private final static int CUSTOMIZEGAME=0;
+	private final static int CUSTOMIZEDGAME=0;
 	private final static int QUICKGAME=1;
 	private final static int LOAD=2;
 	private final static int SAVE=3;
@@ -82,7 +82,7 @@ public class Menu extends JMenuBar implements Observer{
 		customizeGame.setAccelerator(KeyStroke.getKeyStroke("F1"));
 		fastGame.setAccelerator(KeyStroke.getKeyStroke("F2"));
 		
-		customizeGame.addActionListener(new MenuListener(CUSTOMIZEGAME));
+		customizeGame.addActionListener(new MenuListener(CUSTOMIZEDGAME));
 		fastGame.addActionListener(new MenuListener(QUICKGAME));
 		
 		menu2.add(customizeGame);
@@ -101,7 +101,7 @@ public class Menu extends JMenuBar implements Observer{
 
 		public void actionPerformed(ActionEvent e) {
 			switch (i) {
-				case CUSTOMIZEGAME:
+				case CUSTOMIZEDGAME:
 					/*
 					 *  Choix du mode de jeu
 					 */

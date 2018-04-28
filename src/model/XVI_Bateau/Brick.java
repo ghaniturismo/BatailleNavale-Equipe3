@@ -11,7 +11,7 @@ public class Brick extends Bateau{
 	}
 
 	@Override
-	protected Bateau Copy() {
+	protected Bateau copy() {
 		
 	    Brick clone = new Brick();
 	    clone.setForce(this.getForce());

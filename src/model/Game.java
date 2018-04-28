@@ -165,7 +165,7 @@ public class Game extends Observable {
 			}
 			
 			if (!boat) {
-				currentShip = bateau.Copy();
+				currentShip = bateau.copy();
 				currentShip.setX(x);
 				currentShip.setY(y);
 				currentShip.setVertical(vertical);
@@ -376,7 +376,7 @@ public class Game extends Observable {
 	}
 	
 	public void setCurrentShip(Bateau bateau, int size) {
-		currentShip =  bateau.Copy();
+		currentShip =  bateau.copy();
 		currentSize = size;
 	}
 

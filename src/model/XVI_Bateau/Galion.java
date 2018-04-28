@@ -11,7 +11,7 @@ public class Galion extends Bateau{
 	}
 
 	@Override
-	protected Bateau Copy() {
+	protected Bateau copy() {
 		
 		Galion clone = new Galion();
 		clone.setForce(this.getForce());

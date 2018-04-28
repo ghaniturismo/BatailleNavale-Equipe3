@@ -193,7 +193,6 @@ public class DAO_Sauvegarde {
         Game game = new Game();
         File folder = new File("users");
         File[] listOfFiles = folder.listFiles();
-        
         for (int i = 0; i < listOfFiles.length; i++) {
         	   if (listOfFiles[i].isFile() && listOfFiles[i].getName().replaceAll("\\..*", "").equals(profil.getNom())) {
                    try {

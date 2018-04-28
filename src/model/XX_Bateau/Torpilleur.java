@@ -20,7 +20,7 @@ public class Torpilleur extends Bateau {
 	}
 
 	@Override
-	protected Bateau Copy() {
+	protected Bateau copy() {
 		
 		Torpilleur clone = new Torpilleur();
 		clone.setForce(this.getForce());

@@ -20,7 +20,7 @@ public class PorteAvion extends Bateau {
 	}
 
 	@Override
-	protected Bateau Copy() {
+	protected Bateau copy() {
 		
 		PorteAvion clone = new PorteAvion();
 		clone.setForce(this.getForce());

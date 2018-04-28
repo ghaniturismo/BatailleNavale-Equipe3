@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * Classe Aleatoire
+ * gere la stratégie aleatoire de l IA
+ *
+ */
 public class Aleatoire implements IA_Strategy {
 
     ////////////////////////////// VARIABLES //////////////////////////////////
@@ -8,10 +13,15 @@ public class Aleatoire implements IA_Strategy {
 
     ///////////////////////////// CONSTRUCTEUR ////////////////////////////////
 
+	
 	public Aleatoire(){
 		//vide
 	}
 
+	/**
+	 * Methode shoot
+	 * effectue un tir dans le jeu
+	 */
 	public void shoot(World worldPlayer) {
 		
 		boolean tir = false;

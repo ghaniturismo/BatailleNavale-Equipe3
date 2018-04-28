@@ -10,7 +10,7 @@ public class Fregate extends Bateau{
 		super("Fregate", TAILLE);
 	}
 	@Override
-	protected Bateau Copy() {
+	protected Bateau copy() {
 		
 		Fregate clone = new Fregate();
 		clone.setForce(this.getForce());

@@ -7,7 +7,10 @@ import javax.swing.ImageIcon;
 
 import view.ImageFactory;
 
-
+/**
+ * Classe Bateau 
+ * gère les caracteristiques d un bateau 
+ */
 public class Bateau {
     ////////////////////////////// VARIABLES //////////////////////////////////
 
@@ -21,13 +24,21 @@ public class Bateau {
     private ArrayList<Case> cases;   
 
     ///////////////////////////// CONSTRUCTEUR ////////////////////////////////
-
+    
+    /**
+     * Constructeur de la classe
+     * @param type le type du bateau (brick, fregate etc...)
+     * @param taille la taille du bateau dans le tableau
+     */
     public Bateau(String type, int taille){
     	this.type = type;
     	this.taille = taille;
     	cases = new ArrayList<Case>();
     }
     
+    /**
+     * Methode getTexture retournant la texture (image) du bateau en fonction de l'indice
+     */
     public ImageIcon getTexture(ImageFactory imgF, int indice, boolean vertical, String epoque) {
     	switch(epoque){
     		case "16 EME Siecle" :	return imgF.getShipXVI(indice, this.getType(), vertical);
@@ -36,6 +47,11 @@ public class Bateau {
     	}
 	}
 
+    /**
+     * Methode isDead
+     * @return true si toutes les cases du bateau sont touchees
+     * 		   false sinon
+     */
     public boolean isDead(){
     	for(int i=0; i<cases.size(); i++){
     		if(!cases.get(i).isHit())
@@ -154,7 +170,12 @@ public class Bateau {
 		this.taille = taille;
 	}
 	
-	protected Bateau Copy() {
+	
+	/**
+	 * Methode copy
+	 * @return une copie du bateau
+	 */
+	protected Bateau copy() {
 		
 		Bateau clone = new Bateau(this.type,this.taille);
 		clone.setForce(this.getForce());
