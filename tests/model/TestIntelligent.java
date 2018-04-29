@@ -4,24 +4,23 @@ package model;
 import static org.junit.Assert.*;
 
 import model.World;
+import model.strategy.IntelligentStrategy;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import model.Intelligent;
 
 import model.Case;
 
 
 public class TestIntelligent {
 
-	private Intelligent in;
+	private IntelligentStrategy in;
 	private World wp;
 	private Case c;
 	
 	@Before
 	public void setUp() throws Exception {
-		in = new Intelligent();
+		in = new IntelligentStrategy();
 		wp = new World();
 	}
 	

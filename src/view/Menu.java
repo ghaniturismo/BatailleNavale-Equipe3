@@ -7,7 +7,7 @@ import controller.MenuController;
 import model.Epoque;
 import model.Game;
 import model.Game.Etat;
-import model.IA_Strategy;
+import model.strategy.IA_Strategy;
 
 import java.awt.event.*;
 import java.util.Observable;

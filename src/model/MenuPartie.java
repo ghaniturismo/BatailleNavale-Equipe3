@@ -1,4 +1,4 @@
-package view;
+package model;
 
 import java.awt.BorderLayout;
 
@@ -8,7 +8,10 @@ import javax.swing.SwingUtilities;
 import controller.GridController;
 import controller.MenuController;
 import controller.ShipController;
-import model.Game;
+import view.GridView;
+import view.InfoView;
+import view.Menu;
+import view.ShipSelectionView;
 
 public class MenuPartie extends JFrame {
 	

@@ -5,6 +5,8 @@ package model;
 import static org.junit.Assert.*;
 import model.BateauFactory;
 import model.Epoque;
+import model.strategy.IA_Strategy;
+import model.strategy.IntelligentStrategy;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +23,7 @@ public class TestGame {
 	public void setUp() throws Exception {
 		g = new Game();
 		ep = new Siecle_XVI();
-		strat = new Intelligent();
+		strat = new IntelligentStrategy();
 		bf = new BateauFactory();
 		ep.addShip(bf.getBateau("Brick"));
 		ep.addShip(bf.getBateau("Galeasse"));

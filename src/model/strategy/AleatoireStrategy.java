@@ -1,11 +1,14 @@
-package model;
+package model.strategy;
+
+import model.Case;
+import model.World;
 
 /**
  * Classe Aleatoire
  * gere la stratégie aleatoire de l IA
  *
  */
-public class Aleatoire implements IA_Strategy {
+public class AleatoireStrategy implements IA_Strategy {
 
     ////////////////////////////// VARIABLES //////////////////////////////////
 
@@ -14,7 +17,7 @@ public class Aleatoire implements IA_Strategy {
     ///////////////////////////// CONSTRUCTEUR ////////////////////////////////
 
 	
-	public Aleatoire(){
+	public AleatoireStrategy(){
 		//vide
 	}
 

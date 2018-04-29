@@ -23,8 +23,8 @@ public class InfoView extends JPanel implements Observer {
 	public InfoView() {
 		generalInfo = new JLabel("Bienvenue !", SwingConstants.CENTER);
 		age = new JLabel("Epoque : Aucune");
-		infosPlayer = new JLabel("Player : Vies = 0" );
-		infosComputer = new JLabel("Computer : Vies = 0" );
+		infosPlayer = new JLabel("Joueur : Vies = 0" );
+		infosComputer = new JLabel("Ordinateur : Vies = 0" );
 
 		add(generalInfo);
 		add(age);
@@ -39,8 +39,8 @@ public class InfoView extends JPanel implements Observer {
 	public void update(Observable o, Object arg) {
 		age.setText("Epoque : " + ((Game) o).getAge());
 		generalInfo.setText(((Game) o).getInfo());
-		infosPlayer.setText("Player : Vies = " + ((Game) o).getPlayerWorld().getNbLives());
-		infosComputer.setText("Computer : Vies = " + ((Game) o).getComputerWorld().getNbLives());
+		infosPlayer.setText("Joueur : Vies = " + ((Game) o).getPlayerWorld().getNbLives());
+		infosComputer.setText("Ordinateur : Vies = " + ((Game) o).getComputerWorld().getNbLives());
 	}
 	
 }

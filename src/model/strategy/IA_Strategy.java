@@ -1,4 +1,6 @@
-package model;
+package model.strategy;
+
+import model.World;
 
 /**
  * Interface IA_Strategy

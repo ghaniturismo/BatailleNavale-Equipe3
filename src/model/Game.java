@@ -2,6 +2,11 @@ package model;
 
 
 import javax.swing.*;
+
+import model.strategy.AleatoireStrategy;
+import model.strategy.IA_Strategy;
+import model.strategy.IntelligentStrategy;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,6 +21,7 @@ public class Game extends Observable {
 	private ArrayList<Epoque> epoques; //liste des epoques
     private Epoque epoque; 
 	private IA_Strategy strategy;
+
 	private BateauFactory bf; //factory de bateau (pour recuperer les images des bateaux)
 	private Etat etat; //etat du jeu
 	private boolean placeVertical = false; 
@@ -51,8 +57,8 @@ public class Game extends Observable {
 
 		
         //recuperation des deux strategies dans strats
-		strats.add(new Intelligent());
-		strats.add(new Aleatoire());
+		strats.add(new IntelligentStrategy());
+		strats.add(new AleatoireStrategy());
 		
 		bf = new BateauFactory();
 		
@@ -83,7 +89,7 @@ public class Game extends Observable {
 		worldComputer = new World();
 
 		epoque = new Siecle_XVI();
-		strategy = new Aleatoire();
+		strategy = new AleatoireStrategy();
 
 		etat = Etat.WAIT;
 		info = "Bienvenue";
@@ -347,7 +353,7 @@ public class Game extends Observable {
 	public String getAge() {
 		return epoque.getName();
 	}
-
+	
 	public String getInfo() {
 		return info;
 	}
@@ -432,17 +438,6 @@ public class Game extends Observable {
 	public Epoque getEpoque() {
 		return epoque;
 	}
-	
-	/*
-	 * Setter Epoque
-	 */
-	public void setEpoque(Epoque epoque) {
-		this.epoque = epoque;
-	}
-
-	public void setStrategy(IA_Strategy strategy) {
-		this.strategy = strategy;
-	}
 
 	public Etat getEtat() {
 		return etat;
@@ -459,5 +454,18 @@ public class Game extends Observable {
     public void setDate(String _date) {
         this._date = _date;
     }
+    
+	public ArrayList<IA_Strategy> getStrats() {
+		return strats;
+	}
+
+	public void setStrats(ArrayList<IA_Strategy> strats) {
+		this.strats = strats;
+	}
+
+
+	public void setProfil(Profil profil) {
+		this.profil = profil;
+	}
     
 }

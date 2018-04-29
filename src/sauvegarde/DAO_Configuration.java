@@ -7,7 +7,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import org.jdom2.Document;
-import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
@@ -20,9 +19,6 @@ public class DAO_Configuration {
 
     private final String path = "/source/stockage_partie/fich_config.xml";
     private Document document;
-    private final Element racine;
-
- 
     public DAO_Configuration() {
         
         SAXBuilder sxb = new SAXBuilder();
@@ -42,7 +38,7 @@ public class DAO_Configuration {
         } catch (JDOMException | IOException e) {
             e.printStackTrace();
         }
-        racine = document.getRootElement();
+        document.getRootElement();
         
     } 
     

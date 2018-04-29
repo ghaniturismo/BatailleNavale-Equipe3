@@ -2,21 +2,14 @@ package sauvegarde;
 
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
-import org.jdom2.JDOMException;
-import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
-
 
 import model.Bateau;
 import model.Case;
@@ -47,6 +40,8 @@ public class DAO_Sauvegarde {
         try {
         	
         	Profil profil = game.getProfil();
+	        Element p = new Element("partie");
+	        
             // Profil
             Element eProfil = new Element("profil");
             Document doc = new Document();
@@ -63,26 +58,19 @@ public class DAO_Sauvegarde {
             doc.getRootElement().addContent(nomProfil);
 
             // Date
-	        Element date = new Element("date");
-	        date.addContent(new Element("date").setText(game.getDate()));
-	        //doc.getRootElement().addContent(date);
-
-	        Element p = new Element("partie");
-	        p.addContent(date);
-            // Strategie
-            Element strategies = new Element("Strategie"); 
-            strategies.addContent(new Element("Level").setText(game.getStrategy().getName()+""));
-            //doc.getRootElement().addContent(strategies);
-            p.addContent(strategies);
+	        p.addContent(new Element("date").setText(game.getDate()));
+            
+	        // Strategie
+            p.addContent(new Element("Strategie").setText(game.getStrategy().getName()+""));
+            
             // Epoque
             Element epoque = new Element("Epoque"); 
             epoque.addContent(game.getEpoque().getName()+"");
-            //doc.getRootElement().addContent(epoque);
             p.addContent(epoque);
+
             //Etat
             Element etat = new Element("Etat"); 
             etat.addContent(game.getEtat().name() +"");
-            //doc.getRootElement().addContent(etat);
             p.addContent(etat);
             
 //*********************        COMPUTER            ************************************
@@ -123,7 +111,6 @@ public class DAO_Sauvegarde {
                 
             }
             joueur1.addContent(bateauxXml1);
-            //doc.getRootElement().addContent(joueur1);
             p.addContent(joueur1);
                         
             
@@ -164,8 +151,7 @@ public class DAO_Sauvegarde {
             }
             joueur2.addContent(bateauxXmlJ2);
             
-            
-            //doc.getRootElement().addContent(joueur2);
+
             p.addContent(joueur2);
             doc.getRootElement().addContent(p);
             
@@ -193,39 +179,34 @@ public class DAO_Sauvegarde {
     public Game loadGame(Profil profil) {
         
         Game game = new Game();
-        File folder = new File("users");
-        File[] listOfFiles = folder.listFiles();
-        for (int i = 0; i < listOfFiles.length; i++) {
-        	   if (listOfFiles[i].isFile() && listOfFiles[i].getName().replaceAll("\\..*", "").equals(profil.getNom())) {
-                   try {
-                       SAXBuilder builder = new SAXBuilder();
-                       Document document = (Document) builder.build(listOfFiles[i]);
-                       Element rootNode = document.getRootElement();
-                       
+//        File folder = new File("users");
+//        File[] listOfFiles = folder.listFiles();
+//        for (int i = 0; i < listOfFiles.length; i++) {
+//        	   if (listOfFiles[i].isFile() && listOfFiles[i].getName().replaceAll("\\..*", "").equals(profil.getNom())) {
+//                   try {
+//                       SAXBuilder builder = new SAXBuilder();
+//                       Document document = (Document) builder.build(listOfFiles[i]);
+//                       Element rootNode = document.getRootElement();
+//                       
 //                       List list = rootNode.getChildren("partie");
-//                       Element idpartie = (Element) list.get(0);
-//
-//                       String idPartie = idpartie.getAttributeValue("id");
-//                       System.out.println(idPartie);
+//                       Element partie = (Element) list.get(0);
 //                       
-//                       game.getProfil().setId(idPartie);
+//                       game.getProfil().setDate(partie.getChildText("date"));
+//                       game.setStrategy(partie.getChildText("Strategie"));
+//                       game.setEpoque(partie.getChildText("Epoque"));
+//                     
+//                       System.out.println("date "+ partie.getChildText("date"));
+//                       System.out.println("stra "+ partie.getChildText("Strategie"));
 //                       
 //                       
-//                       System.out.println("\n id "+ rootNode);
-//                       System.out.println("\n date "+ profil.getDate());
-//                       
-//                       profil.setId(idPartie);
-//                       partie.setAutomatique(auto);
-//                       partie.setDate(partieElt.getChildText("date"));
-                       
-                   } catch (FileNotFoundException ex) {
-                	   Logger.getLogger(DAO_Sauvegarde.class.getName()).log(Level.SEVERE, null, ex);
-                   } catch (JDOMException | IOException ex) {
-                       Logger.getLogger(DAO_Sauvegarde.class.getName()).log(Level.SEVERE, null, ex);
-                   }         		   
-        	   }
-        }
-        
+//                   } catch (FileNotFoundException ex) {
+//                	   Logger.getLogger(DAO_Sauvegarde.class.getName()).log(Level.SEVERE, null, ex);
+//                   } catch (JDOMException | IOException ex) {
+//                       Logger.getLogger(DAO_Sauvegarde.class.getName()).log(Level.SEVERE, null, ex);
+//                   }         		   
+//        	   }
+//        }
+//        
         return game;
         
     }

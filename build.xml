@@ -37,6 +37,7 @@
         <delete dir="jar"/>
         <delete dir="users"/>
         <delete dir="bin"/>
+    	<delete dir="junit"/>
     </target>
 	
     <target depends="clean" name="cleanall"/>
@@ -63,7 +64,6 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="controller.TestGridController" todir="${junit.output.dir}"/>
-            <test name="controller.TestMenuController" todir="${junit.output.dir}"/>
             <test name="controller.TestShipController" todir="${junit.output.dir}"/>
         	<test name="model.TestAleatoire" todir="${junit.output.dir}"/>
         	<test name="model.TestBateau" todir="${junit.output.dir}"/>

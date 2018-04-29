@@ -9,12 +9,10 @@ public class ImageFactory {
 	/*
 	 * Les fonds des bouton / explosion ,tire , arriere plan
 	 */
-	private ImageIcon none = new ImageIcon(getClass().getResource("/source/img/0.png"));
 	private ImageIcon background = new ImageIcon(getClass().getResource("/source/img/background.png"));
 	private ImageIcon ship = new ImageIcon(getClass().getResource("/source/img/BoatDefault.png"));
 	private ImageIcon shoot = new ImageIcon(getClass().getResource("/source/img/Miss.png"));
 	private ImageIcon explosion = new ImageIcon(getClass().getResource("/source/img/Hit.png"));
-	//private ImageIcon fondEcran = new ImageIcon(getClass().getResource("/source/img/background1.jpg"));
 	
 	
 		//********************

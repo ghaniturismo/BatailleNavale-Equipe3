@@ -1,4 +1,4 @@
-package view;
+package model;
 
 import javax.swing.*;
 
@@ -61,16 +61,13 @@ public class MenuPrincipal{
 	
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	            	frame.dispose();
-	            	frame.setVisible(false);
-	                MenuPartie menuPartie = new MenuPartie();
-	                menuPartie.setVisible(true);   
+	                new MenuPartie();
+	                frame.dispose();
 	            }
-	      
-	        };
+	    };
 			
 		player.addActionListener(play);
-	
+		frame.setVisible(true);
 		}
    
 }

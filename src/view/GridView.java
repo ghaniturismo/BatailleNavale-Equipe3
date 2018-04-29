@@ -20,6 +20,7 @@ import model.Case;
 import model.Game;
 import model.Game.Etat;
 
+
 public class GridView extends JPanel implements Observer {
 
 	////////////////////////////// VARIABLES //////////////////////////////////
@@ -32,10 +33,7 @@ public class GridView extends JPanel implements Observer {
 	private GridController gridController;
 	private boolean player = false;
 
-	/**
-	 * Music
-	 */
-	//private Clip music;
+
 	
     ///////////////////////////// CONSTRUCTEUR ////////////////////////////////
 	
@@ -78,9 +76,7 @@ public class GridView extends JPanel implements Observer {
 				add(grid[i][j]);
 			}
 		}
-//		music = SoundFactory.getInstance().getBackgroundSound();
-//		music.loop(Clip.LOOP_CONTINUOUSLY);
-//		music.start();
+		
 	}
 	
 	public class GridListener implements MouseListener {

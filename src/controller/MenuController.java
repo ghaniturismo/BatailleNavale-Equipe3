@@ -3,7 +3,7 @@ package controller;
 
 import model.Epoque;
 import model.Game;
-import model.IA_Strategy;
+import model.strategy.IA_Strategy;
 
 public class MenuController {
     ////////////////////////////// VARIABLES //////////////////////////////////

@@ -4,8 +4,8 @@ package model;
 
 import static org.junit.Assert.*;
 
-import model.Aleatoire;
 import model.World;
+import model.strategy.AleatoireStrategy;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,13 +15,13 @@ import model.Case;
 
 public class TestAleatoire {
 
-	private Aleatoire al;
+	private AleatoireStrategy al;
 	private World wp;
 	private Case c;
 	
 	@Before
 	public void setUp() throws Exception {
-		al = new Aleatoire();
+		al = new AleatoireStrategy();
 		wp = new World();
 	}
 	

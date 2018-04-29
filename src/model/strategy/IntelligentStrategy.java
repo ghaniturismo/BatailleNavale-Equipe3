@@ -1,12 +1,15 @@
-package model;
+package model.strategy;
 
 import java.util.ArrayList;
+
+import model.Case;
+import model.World;
 
 /**
  * Classe Intelligent 
  * gere la strategie 'Intelligent'
  */
-public class Intelligent implements IA_Strategy{
+public class IntelligentStrategy implements IA_Strategy{
 	
     ////////////////////////////// VARIABLES //////////////////////////////////
 	
@@ -16,7 +19,7 @@ public class Intelligent implements IA_Strategy{
 	/**
 	 * Constructeur sans parametre
 	 */
-	public Intelligent(){
+	public IntelligentStrategy(){
 		
 	}
 	
