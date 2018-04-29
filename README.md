@@ -9,9 +9,9 @@ Master 1 Informatique - Universite de Lorraine
 # Compilation et éxecution
    - Terminal :
         * **ant** --> Pour la compilation.
-        * **ant run** --> Generer et lancer l'éxecution.
+        * **ant run** --> Générer et lancer l'éxecution.
+        * **ant tests** --> Pour les tests unitaires ...
         * **ant clean** --> Supprimer les fichiers bin ...
-
    
 # Backlog
   Ordre/priorité  Fonctionnalité
@@ -28,7 +28,7 @@ Master 1 Informatique - Universite de Lorraine
   -  [OK pour deux strat] Implémenter les stratégies de l'IA
   -  [OK]			      Compteur de tirs -SCORE-
   -  [OK]			      Fin d'une partie
-  -  [OK]                 Implémenter la sauvgarde d’une partie [SAVE game]
-  -  []                 Implémenter la reprise d’une partie     [LOAD game]
+  -  [OK]                 Implémenter la sauvgarde d’une partie__[SAVE game]
+  -  [NON]                Implémenter la reprise d’une partie____[LOAD game]
   -  [OK]                 FIX build.xml
-  -  [en cours]          Tests Unitaires
+  -  [OK]                 Tests Unitaires
