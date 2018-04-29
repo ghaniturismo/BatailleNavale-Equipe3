@@ -65,24 +65,25 @@ public class DAO_Sauvegarde {
             // Date
 	        Element date = new Element("date");
 	        date.addContent(new Element("date").setText(game.getDate()));
-	        doc.getRootElement().addContent(date);
+	        //doc.getRootElement().addContent(date);
 
-	        
+	        Element p = new Element("partie");
+	        p.addContent(date);
             // Strategie
             Element strategies = new Element("Strategie"); 
             strategies.addContent(new Element("Level").setText(game.getStrategy().getName()+""));
-            doc.getRootElement().addContent(strategies);
-            
+            //doc.getRootElement().addContent(strategies);
+            p.addContent(strategies);
             // Epoque
             Element epoque = new Element("Epoque"); 
             epoque.addContent(game.getEpoque().getName()+"");
-            doc.getRootElement().addContent(epoque);
-            
+            //doc.getRootElement().addContent(epoque);
+            p.addContent(epoque);
             //Etat
             Element etat = new Element("Etat"); 
             etat.addContent(game.getEtat().name() +"");
-            doc.getRootElement().addContent(etat);
-            
+            //doc.getRootElement().addContent(etat);
+            p.addContent(etat);
             
 //*********************        COMPUTER            ************************************
             Element joueur1 = new Element("joueur1");
@@ -122,8 +123,8 @@ public class DAO_Sauvegarde {
                 
             }
             joueur1.addContent(bateauxXml1);
-            doc.getRootElement().addContent(joueur1);
-          
+            //doc.getRootElement().addContent(joueur1);
+            p.addContent(joueur1);
                         
             
             //*********************          PLAYER           ************************************  
@@ -164,8 +165,9 @@ public class DAO_Sauvegarde {
             joueur2.addContent(bateauxXmlJ2);
             
             
-            doc.getRootElement().addContent(joueur2);
-
+            //doc.getRootElement().addContent(joueur2);
+            p.addContent(joueur2);
+            doc.getRootElement().addContent(p);
             
             XMLOutputter xmlOutput = new XMLOutputter();
 
@@ -199,12 +201,22 @@ public class DAO_Sauvegarde {
                        SAXBuilder builder = new SAXBuilder();
                        Document document = (Document) builder.build(listOfFiles[i]);
                        Element rootNode = document.getRootElement();
-                       List<?> list = rootNode.getChildren("partie");
-                       for (int j = 0; j < list.size(); j++) {
-                    	   /*
-                    	    * A completer
-                    	    */
-                       }
+                       
+//                       List list = rootNode.getChildren("partie");
+//                       Element idpartie = (Element) list.get(0);
+//
+//                       String idPartie = idpartie.getAttributeValue("id");
+//                       System.out.println(idPartie);
+//                       
+//                       game.getProfil().setId(idPartie);
+//                       
+//                       
+//                       System.out.println("\n id "+ rootNode);
+//                       System.out.println("\n date "+ profil.getDate());
+//                       
+//                       profil.setId(idPartie);
+//                       partie.setAutomatique(auto);
+//                       partie.setDate(partieElt.getChildText("date"));
                        
                    } catch (FileNotFoundException ex) {
                 	   Logger.getLogger(DAO_Sauvegarde.class.getName()).log(Level.SEVERE, null, ex);
