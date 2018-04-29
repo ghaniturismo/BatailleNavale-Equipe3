@@ -23,9 +23,6 @@ public class PorteAvion extends Bateau {
 	protected Bateau copy() {
 		
 		PorteAvion clone = new PorteAvion();
-		clone.setForce(this.getForce());
-		clone.setRobustesse(this.getRobustesse());
-		clone.setNbProjectile(this.getNbProjectile());
 	    clone.setX(this.getX());
 	    clone.setY(this.getY());
 	    clone.setVertical(this.isVertical());

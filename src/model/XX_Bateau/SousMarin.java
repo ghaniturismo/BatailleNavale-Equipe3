@@ -23,9 +23,6 @@ public class SousMarin extends Bateau {
 	protected Bateau copy() {
 		
 		SousMarin clone = new SousMarin();
-		clone.setForce(this.getForce());
-		clone.setRobustesse(this.getRobustesse());
-		clone.setNbProjectile(this.getNbProjectile());
 	    clone.setX(this.getX());
 	    clone.setY(this.getY());
 	    clone.setVertical(this.isVertical());

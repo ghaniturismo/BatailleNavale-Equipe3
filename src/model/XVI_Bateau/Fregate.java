@@ -13,9 +13,6 @@ public class Fregate extends Bateau{
 	protected Bateau copy() {
 		
 		Fregate clone = new Fregate();
-		clone.setForce(this.getForce());
-		clone.setRobustesse(this.getRobustesse());
-		clone.setNbProjectile(this.getNbProjectile());
 	    clone.setX(this.getX());
 	    clone.setY(this.getY());
 	    clone.setVertical(this.isVertical());

@@ -16,9 +16,6 @@ public class Bateau {
 
 	private String type;
 	private int taille;
-    private int force;
-    private int robustesse;
-    private int nb_projectile;
     private int posX, posY;
     private boolean vertical = false;
     private ArrayList<Case> cases;   
@@ -90,30 +87,6 @@ public class Bateau {
     	return taille;
     }
     
-    public int getForce(){
-    	return force;
-    }
-    
-    public void setForce(int f){
-    	force = f;
-    }
-    
-    public int getRobustesse(){
-    	return robustesse;
-    }
-    
-    public void setRobustesse(int r){
-    	robustesse = r;
-    }
-    
-    public int getNbProjectile(){
-    	return nb_projectile;
-    }
-    
-    public void setNbProjectile(int nb){
-    	nb_projectile = nb;
-    }
-    
     public boolean isVertical(){
     	return vertical;
     }
@@ -178,9 +151,6 @@ public class Bateau {
 	protected Bateau copy() {
 		
 		Bateau clone = new Bateau(this.type,this.taille);
-		clone.setForce(this.getForce());
-		clone.setRobustesse(this.getRobustesse());
-		clone.setNbProjectile(this.getNbProjectile());
 	    clone.setX(this.getX());
 	    clone.setY(this.getY());
 	    clone.setVertical(this.isVertical());
